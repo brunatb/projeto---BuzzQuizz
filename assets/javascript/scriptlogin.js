@@ -19,7 +19,8 @@ function enviarUsuario(usuario){
 }
 
 function loginSucesso(resposta){
-    identificadorUsuario = resposta.data;
+    identificadorUsuario = resposta.data.token;
+    console.log(identificadorUsuario);
 }
 
 function loginFalha(resposta){
