@@ -19,8 +19,11 @@ function enviarUsuario(usuario){
 }
 
 function loginSucesso(resposta){
+    var paginaLogin = document.querySelector(".pagina-login");
+    var paginaListagem = document.querySelector(".listagem-quizzes");
     identificadorUsuario = resposta.data.token;
-    console.log(identificadorUsuario);
+    paginaLogin.style.display = "none";
+    paginaListagem.style.display = "block";
 }
 
 function loginFalha(resposta){
