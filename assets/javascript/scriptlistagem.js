@@ -12,7 +12,6 @@ function buscarQuizzes(){
 
 function extrairQuizzes(resposta){
     listaQuizzes = resposta.data;
-    console.log(listaQuizzes);
     renderizarQuizzes();
 }
 

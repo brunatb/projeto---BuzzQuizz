@@ -19,7 +19,6 @@ function enviarUsuario(usuario){
 }
 
 function loginSucesso(resposta){
-    console.log(resposta);
     var paginaLogin = document.querySelector(".pagina-login");
     var paginaListagem = document.querySelector(".listagem-quizzes");
     identificadorUsuario = resposta.data.token;

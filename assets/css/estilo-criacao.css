@@ -14,3 +14,94 @@
     font-weight: bold;
     margin: 0 0 50px 0;
 }
+
+.container-perguntas, .container-niveis{
+   padding: 0 25%;
+}
+
+.titulo-quizz{
+    width: 100%;
+    padding: 5px;
+    font-size: 20px;
+    border: 1px solid #C1C1C1;
+    border-radius: 5px;
+    margin: 0 0 15px 0;
+}
+
+.informacao-pergunta, .informacao-niveis{
+    width: 100%;
+    background: lightblue;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.informacao-pergunta p, .informacao-niveis p{
+    font-size: 20px;
+    margin: 0 0 10px 0;
+}
+
+.pergunta{
+    width: 100%;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.conjunto-resposta-imagem, .acertos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.resposta, .imagem{
+    width: 49%;
+    font-size: 14px;
+    background: #FFD9D9;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.correta{
+    background: #DAFFD9;
+}
+
+.criacao-quizzes ion-icon{
+    font-size: 30px;
+    color: #6C8FB8;
+    margin: 10px calc(50% - 15px) 30px calc(50% - 15px);
+    cursor: pointer;
+}
+
+.minimo, .maximo, .titulo-nivel, .imagem-nivel, .descricao-nivel{
+    font-size: 14px;
+    background: #FFFFFF;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.minimo, .maximo{
+    width: 49%;
+}
+
+.titulo-nivel, .imagem-nivel, .descricao-nivel{
+    width: 100%;
+}
+
+.descricao-nivel{
+    font-family: 'Roboto', sans-serif;
+}
+
+.publicar{
+    padding: 0 25%;
+}
+
+.publicar p{
+    width: 100%;
+    padding: 10px;
+    background: blue;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 0 20px 0;
+}

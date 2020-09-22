@@ -32,6 +32,44 @@
             <header>
                 <h1>BuzzQuizz</h1>
             </header>
+            <div class="container-perguntas">
+                <input type="text" placeholder="Digite o título do seu quizz" class="titulo-quizz">
+                <div class="informacao-pergunta">
+                    <p>Pergunta 1</p>
+                    <input type="text" placeholder="Digite a pergunta" class="pergunta">
+                    <div class="conjunto-resposta-imagem">
+                        <input type="text" placeholder="Digite a resposta correta"  class="resposta correta">
+                        <input type="text" placeholder="Link para imagem correta" class="imagem correta">
+                    </div>
+                    <div class="conjunto-resposta-imagem">
+                        <input type="text" placeholder="Digite uma resposta errada 1" class="resposta">
+                        <input type="text" placeholder="Link para a imagem errada 1" class="imagem">
+                    </div>
+                    <div class="conjunto-resposta-imagem">
+                        <input type="text" placeholder="Digite uma resposta errada 2" class="resposta">
+                        <input type="text" placeholder="Link para a imagem errada 2" class="imagem">
+                    </div>
+                    <div class="conjunto-resposta-imagem">
+                        <input type="text" placeholder="Digite uma resposta errada 3" class="resposta">
+                        <input type="text" placeholder="Link para a imagem errada 3" class="imagem">
+                    </div>
+                </div>
+            </div>
+            <ion-icon name="add-circle"></ion-icon>
+            <div class="container-niveis">
+                <div class="informacao-niveis">
+                    <p>Nível 1</p>
+                    <div class="acertos">
+                        <input type="text" placeholder="% Mínima de acerto do nível" class="minimo">
+                        <input type="text" placeholder="% Máxima de acerto do nível" class="maximo">
+                    </div>
+                    <input type="text" placeholder="Título do nível" class="titulo-nivel">
+                    <input type="text" placeholder="Link da imagem do nível" class="imagem-nivel">
+                    <textarea placeholder="Descrição do nível" class="descricao-nivel"></textarea>
+                </div>
+            </div>
+            <ion-icon name="add-circle"></ion-icon>
+            <div class="publicar"><p>Publicar</p></div>
         </section>
         <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
