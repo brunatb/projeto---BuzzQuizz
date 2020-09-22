@@ -21,5 +21,6 @@ function loginSucesso(resposta){
 }
 
 function loginFalha(resposta){
-    console.log("erro");
+    alert("Usuário ou senha incorreta. Tente novamente.");
+    document.querySelector(".senha").value = "";
 }
