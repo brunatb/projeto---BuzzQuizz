@@ -29,7 +29,6 @@ function loginSucesso(resposta){
 }
 
 function loginFalha(resposta){
-    console.log(resposta);
     var habilitado = document.querySelector(".entrar");
     alert("Usuário ou senha incorreta. Tente novamente.");
     document.querySelector(".senha").value = "";
