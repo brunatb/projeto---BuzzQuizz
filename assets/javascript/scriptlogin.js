@@ -5,10 +5,10 @@ function verificarLogin(){
     var desabilitado = document.querySelector(".entrar");
     usuario.email = document.querySelector(".email").value;
     usuario.password = document.querySelector(".senha").value;
+    desabilitado.removeAttribute("onclick");
     if(usuario.email === "" || usuario.password === ""){
         alert("Preencha todos os campos!");
     }else{
-        desabilitado.removeAttribute("onclick");
         enviarUsuario(usuario);
     }
 }
@@ -19,14 +19,17 @@ function enviarUsuario(usuario){
 }
 
 function loginSucesso(resposta){
+    console.log(resposta);
     var paginaLogin = document.querySelector(".pagina-login");
     var paginaListagem = document.querySelector(".listagem-quizzes");
     identificadorUsuario = resposta.data.token;
     paginaLogin.style.display = "none";
     paginaListagem.style.display = "block";
+    buscarQuizzes();
 }
 
 function loginFalha(resposta){
+    console.log(resposta);
     var habilitado = document.querySelector(".entrar");
     alert("Usuário ou senha incorreta. Tente novamente.");
     document.querySelector(".senha").value = "";

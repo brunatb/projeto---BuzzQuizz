@@ -1,6 +1,57 @@
 .listagem-quizzes{
     display: none;
+    font-family: 'Roboto', sans-serif;
     width: 100%;
     height: 100vh;
-    background: black;
+    background: white;
+}
+
+.listagem-quizzes header{
+    padding: 10px;
+    background: blue;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 50px 0;
+}
+
+.container-quizzes{
+    width: 100%;
+    padding: 0 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizz{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-shrink: 0;
+    width: 120px;
+    height: 140px;
+    border-radius: 15px;
+    padding: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin: 0 10px 10px 10px;
+    box-shadow: 0.5px 0.5px 4px 1px rgba(0, 0, 0, 0.2);;
+}
+
+.novo{
+    background: blue;
+    color: white;
+}
+
+.novo p{
+    margin: 0 0 20px 0;
+}
+
+.novo ion-icon{
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
 }
