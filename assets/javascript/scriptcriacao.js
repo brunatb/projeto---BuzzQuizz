@@ -1,5 +1,6 @@
 var contadorPerguntas = 1;
 var contadorNivel = 1;
+
 var quizz = {title:"", data: {
     perguntas:[],
     niveis: []}
@@ -24,36 +25,70 @@ function maisNivel(){
 function pegarQuizzes(){
     var todasPerguntas = document.querySelectorAll(".informacao-pergunta");
     var todosNiveis = document.querySelectorAll(".informacao-niveis");
+
     var tituloQuizz = document.querySelector(".titulo-quizz").value;
+    tituloQuizz = tituloQuizz.trim();
     tituloQuizz = primeiraLetraMaiuscula(tituloQuizz);
     quizz.title = tituloQuizz;
+
+    pegarRespostas(todasPerguntas);
+    pegarNiveis(todosNiveis);
+    console.log(quizz)
+}
+
+function pegarRespostas(todasPerguntas){
     for(var i = 0; i < todasPerguntas.length; i++){
         var estruturaPerguntas = {tituloPergunta: "", respostas: [], respostaCerta: ""};
+
         var pergunta = todasPerguntas[i].querySelector(".pergunta").value;
+        pergunta = pergunta.trim();
         pergunta = primeiraLetraMaiuscula(pergunta);
         estruturaPerguntas.tituloPergunta = pergunta;
+
         var respostasEssaPergunta = todasPerguntas[i].querySelectorAll(".resposta");
         var imagensEssaPergunta = todasPerguntas[i].querySelectorAll(".imagem");
+
         for(var j = 0; j < 4; j++){
             var estruturaRespostas = {texto:"", imagem:""};
+
+            respostasEssaPergunta[j].value = respostasEssaPergunta[j].value.trim()
             respostasEssaPergunta[j].value = primeiraLetraMaiuscula(respostasEssaPergunta[j].value);
             estruturaRespostas.texto = respostasEssaPergunta[j].value;
+
+            imagensEssaPergunta[j].value = imagensEssaPergunta[j].value.trim();
             estruturaRespostas.imagem = imagensEssaPergunta[j].value;
+
             estruturaPerguntas.respostas.push(estruturaRespostas);
         }
         estruturaPerguntas.respostaCerta = respostasEssaPergunta[0].value;
         quizz.data.perguntas.push(estruturaPerguntas);
     }
+}
+
+function pegarNiveis(todosNiveis){
     for(var i = 0; i < todosNiveis.length; i++){
+
         var estruturaNiveis = {min:"", max:"",tituloNivel:"",linkImagem:"",descricao:""};
+
         estruturaNiveis.min = todosNiveis[i].querySelector(".minimo").value;
+        estruturaNiveis.min = estruturaNiveis.min.trim();
+
         estruturaNiveis.max = todosNiveis[i].querySelector(".maximo").value;
+        estruturaNiveis.max = estruturaNiveis.max.trim();
+
         estruturaNiveis.tituloNivel = todosNiveis[i].querySelector(".titulo-nivel").value;
+        estruturaNiveis.tituloNivel = estruturaNiveis.tituloNivel.trim();
+        estruturaNiveis.tituloNivel = primeiraLetraMaiuscula(estruturaNiveis.tituloNivel);
+
         estruturaNiveis.linkImagem = todosNiveis[i].querySelector(".imagem-nivel").value;
+        estruturaNiveis.linkImagem = estruturaNiveis.linkImagem.trim();
+
         estruturaNiveis.descricao = todosNiveis[i].querySelector(".descricao-nivel").value;
+        estruturaNiveis.descricao = estruturaNiveis.descricao.trim();
+        estruturaNiveis.descricao = primeiraLetraMaiuscula(estruturaNiveis.descricao);
+
         quizz.data.niveis.push(estruturaNiveis);
     }    
-    console.log(quizz)
 }
 
 function primeiraLetraMaiuscula(string){
