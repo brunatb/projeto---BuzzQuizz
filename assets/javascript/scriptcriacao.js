@@ -1,5 +1,6 @@
 var contadorPerguntas = 1;
 var contadorNivel = 1;
+var necessarioCorrecao = 0;
 
 var quizz = {title:"", data: {
     perguntas:[],
@@ -32,17 +33,32 @@ function pegarQuizzes(){
     quizz.title = tituloQuizz;
 
     pegarRespostas(todasPerguntas);
-    pegarNiveis(todosNiveis);
-    console.log(quizz)
+    if(necessarioCorrecao === 0){
+        pegarNiveis(todosNiveis);
+    }
+    console.log(quizz);
 }
 
 function pegarRespostas(todasPerguntas){
     for(var i = 0; i < todasPerguntas.length; i++){
         var estruturaPerguntas = {tituloPergunta: "", respostas: [], respostaCerta: ""};
 
-        var pergunta = todasPerguntas[i].querySelector(".pergunta").value;
+        var pergunta = todasPerguntas[i].querySelector(".pergunta").value; 
         pergunta = pergunta.trim();
         pergunta = primeiraLetraMaiuscula(pergunta);
+        var ultimoIndicePergunta = pergunta.length - 1;
+        var indiceInterrogacao = pergunta.indexOf('?');
+
+        if(indiceInterrogacao === -1 || indiceInterrogacao < ultimoIndicePergunta){
+            alert("Corrija a " + todasPerguntas[i].querySelector("p").innerText);
+            necessarioCorrecao = 1;
+            quizz = {title:"", data: {
+                perguntas:[],
+                niveis: []}
+            };
+            return;
+        }
+
         estruturaPerguntas.tituloPergunta = pergunta;
 
         var respostasEssaPergunta = todasPerguntas[i].querySelectorAll(".resposta");
@@ -63,6 +79,7 @@ function pegarRespostas(todasPerguntas){
         estruturaPerguntas.respostaCerta = respostasEssaPergunta[0].value;
         quizz.data.perguntas.push(estruturaPerguntas);
     }
+    necessarioCorrecao = 0;
 }
 
 function pegarNiveis(todosNiveis){
