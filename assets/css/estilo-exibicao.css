@@ -48,6 +48,7 @@
     width: 49%;
     border: 0.5px solid #C1C1C1;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .campo-resposta img{

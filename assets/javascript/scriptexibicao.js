@@ -2,6 +2,9 @@ var containerExibicao = document.querySelector(".exibicao-quizz");
 var numeroPerguntas = 0;
 var contadorPerguntasExibidas = 0;
 var conjuntoPerguntas = [];
+var quantidadeAcertos = 0;
+var perguntasQuizz = document.querySelector(".perguntas-quizz");
+var objetoQuizz;
 
 function entrarNoQuizz(qualQuizz){
     var paginaListagem = document.querySelector(".listagem-quizzes");
@@ -12,14 +15,12 @@ function entrarNoQuizz(qualQuizz){
 }
 
 function buscarNaLista(idQuizz){
-    var objetoQuizz;
     for(var i = 0; i < listaQuizzes.length; i++){
         if(listaQuizzes[i].id == idQuizz){
             objetoQuizz = listaQuizzes[i];
         }
     }
     conjuntoPerguntas = objetoQuizz.data.perguntas;
-    renderizarNomeQuizz(objetoQuizz.title);
     organizarPerguntas();
 }
 
@@ -29,20 +30,38 @@ function renderizarNomeQuizz(nomeQuizz){
 }
 
 function organizarPerguntas(){
+    perguntasQuizz.innerHTML = '<h1></h1><h2></h2><div class="linha1"></div><div class="linha2"></div>'
+    renderizarNomeQuizz(objetoQuizz.title);
     if(numeroPerguntas === 0  && conjuntoPerguntas.length > 0){
         if(conjuntoPerguntas[0].tituloPergunta !== ""){
             renderizarPerguntaERespostas(conjuntoPerguntas[0]);
         }
         numeroPerguntas = conjuntoPerguntas.length;
         contadorPerguntasExibidas++;
-    }else if(conjuntoPerguntas.length > Exibidas){
+    }else if(conjuntoPerguntas.length > contadorPerguntasExibidas){
         if(conjuntoPerguntas[contadorPerguntasExibidas].tituloPergunta !== ""){
             renderizarPerguntaERespostas(conjuntoPerguntas[contadorPerguntasExibidas]);
+            contadorPerguntasExibidas++;
         }
     }else{
         numeroPerguntas = 0;
         contadorPerguntasExibidas = 0;
     }
+}
+
+function escolheuResposta(elemento){
+    if(elemento.classList.contains("acerto")){
+        quantidadeAcertos++;
+    }
+    var mudarCorFundo = document.querySelectorAll(".campo-resposta");
+    for(var i = 0; i < mudarCorFundo.length; i++){
+        if(mudarCorFundo[i].classList.contains("acerto")){
+            mudarCorFundo[i].style.background ="#DAFFD9";
+        }else if(mudarCorFundo[i].classList.contains("erro")){
+            mudarCorFundo[i].style.background ="#FFD9D9";
+        }
+    }
+    setTimeout(organizarPerguntas, 2000);
 }
 
 
