@@ -35,8 +35,8 @@ function pegarQuizzes(){
     pegarRespostas(todasPerguntas);
     if(necessarioCorrecao === 0){
         pegarNiveis(todosNiveis);
+        mandarQuizz();
     }
-    console.log(quizz);
 }
 
 function pegarRespostas(todasPerguntas){
@@ -111,6 +111,27 @@ function pegarNiveis(todosNiveis){
 function primeiraLetraMaiuscula(string){
     return ((string.charAt(0)).toUpperCase() + string.slice(1));
 }
+
+function mandarQuizz(){
+    var token = {
+        headers: {'User-Token': identificadorUsuario}
+    };
+    var requisicao = axios.post('https://mock-api.bootcamp.respondeai.com.br/api/v1/buzzquizz/quizzes', quizz, token);
+    requisicao.then(telaVoltarListagem).catch(seErro);
+}
+
+function telaVoltarListagem(){
+    var paginaListagem = document.querySelector(".listagem-quizzes");
+    var paginaCriacao = document.querySelector(".criacao-quizzes");
+    paginaListagem.style.display = "block";
+    paginaCriacao.style.display = "none";
+    buscarQuizzes();
+}
+
+function seErro(){
+    alert("Erro");
+}
+
 
 function renderizarPerguntas(containerPerguntas, novaPergunta){
     novaPergunta.innerHTML = "<p>Pergunta " + contadorPerguntas + "</p>";

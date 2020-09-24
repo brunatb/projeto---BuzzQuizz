@@ -12,7 +12,7 @@
     color: white;
     font-size: 30px;
     font-weight: bold;
-    margin: 0 0 50px 0;
+    margin: 0 0 25px 0;
 }
 
 .container-perguntas, .container-niveis{
@@ -25,7 +25,7 @@
     font-size: 20px;
     border: 1px solid #C1C1C1;
     border-radius: 5px;
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
 }
 
 .informacao-pergunta, .informacao-niveis{
@@ -33,7 +33,7 @@
     background: lightblue;
     padding: 10px;
     border-radius: 5px;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
 }
 
 .informacao-pergunta p, .informacao-niveis p{
@@ -46,6 +46,7 @@
     font-size: 16px;
     padding: 5px;
     border-radius: 5px;
+    margin: 0 0 5px 0;
 }
 
 .conjunto-resposta-imagem, .acertos{
@@ -54,11 +55,12 @@
 }
 
 .resposta, .imagem{
-    width: 49%;
+    width: 49.5%;
     font-size: 14px;
     background: #FFD9D9;
     padding: 5px;
     border-radius: 5px;
+    margin: 0 0 5px 0;
 }
 
 .correta{
@@ -68,7 +70,7 @@
 .criacao-quizzes ion-icon{
     font-size: 30px;
     color: #6C8FB8;
-    margin: 10px calc(50% - 15px) 30px calc(50% - 15px);
+    margin: 5px calc(50% - 15px) 5px calc(50% - 15px);
     cursor: pointer;
 }
 
@@ -77,10 +79,11 @@
     background: #FFFFFF;
     padding: 5px;
     border-radius: 5px;
+    margin: 0 0 5px 0;
 }
 
 .minimo, .maximo{
-    width: 49%;
+    width: 49.5%;
 }
 
 .titulo-nivel, .imagem-nivel, .descricao-nivel{
@@ -104,5 +107,5 @@
     text-align: center;
     border-radius: 5px;
     cursor: pointer;
-    margin: 0 0 20px 0;
+    margin: 0 0 5px 0;
 }

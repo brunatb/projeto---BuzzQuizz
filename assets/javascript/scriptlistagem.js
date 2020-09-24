@@ -12,6 +12,7 @@ function buscarQuizzes(){
 
 function extrairQuizzes(resposta){
     listaQuizzes = resposta.data;
+    console.log(resposta.data);
     renderizarQuizzes();
 }
 
@@ -30,6 +31,7 @@ function renderizarQuizzes(){
         var quizzExistente = document.createElement("li");
         quizzExistente.classList.add("quizz");
         quizzExistente.setAttribute("id", listaQuizzes[i].id);
+        quizzExistente.setAttribute("onclick","entrarNoQuizz(this.id)");
         quizzExistente.innerHTML = " <p>" + listaQuizzes[i].title +"</p>"
         containerQuizzes.appendChild(quizzExistente);
     }
