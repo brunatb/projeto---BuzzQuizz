@@ -8,13 +8,13 @@ function entrarNoQuizz(qualQuizz){
     var paginaExibicao = document.querySelector(".exibicao-quizz");
     paginaListagem.style.display = "none";
     paginaExibicao.style.display = "block";
-    buscarNaLista(qualQuizz)
+    buscarNaLista(qualQuizz);
 }
 
 function buscarNaLista(idQuizz){
     var objetoQuizz;
     for(var i = 0; i < listaQuizzes.length; i++){
-        if(listaQuizzes[i].id === idQuizz){
+        if(listaQuizzes[i].id == idQuizz){
             objetoQuizz = listaQuizzes[i];
         }
     }
