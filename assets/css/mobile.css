@@ -1,6 +1,7 @@
 @media(max-width: 1024px){
     .pagina-login{
         padding: 40% 0 0 0;
+        height: 100vh;
     }
 
     .campos-login{
@@ -14,6 +15,10 @@
     .titulo-quizz{
         width: 80%;
         font-size: 18px;
+    }
+
+    .quizz{
+        margin: 0 15px 15px 15px;
     }
 
     .informacao-pergunta, .informacao-niveis{
