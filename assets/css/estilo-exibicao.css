@@ -7,6 +7,7 @@
 }
 
 .exibicao-quizz header{
+    font-family: 'Roboto', sans-serif;
     padding: 10px;
     background: blue;
     color: white;
@@ -65,12 +66,15 @@
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: black;
-    font-weight: bold;
 }
 
 .container-nivel{
     display: flex;
     justify-content: center;
+}
+
+.div-texto{
+    width: 25%;
 }
 
 .titulo-nivel{

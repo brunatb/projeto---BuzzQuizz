@@ -52,6 +52,7 @@ function organizarPerguntas(){
         tratarAcertos();
         numeroPerguntas = 0;
         contadorPerguntasExibidas = 0;
+        quantidadeAcertos = 0;
     }
 }
 
@@ -128,6 +129,7 @@ function renderizarResultado(porcentagem){
     containerNivel.classList.add("container-nivel");
     
     var divTexto = document.createElement("div");
+    divTexto.classList.add("div-texto");
     
     var tituloNivel = document.createElement("p");
     tituloNivel.classList.add("titulo-nivel");

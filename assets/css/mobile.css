@@ -1,0 +1,69 @@
+@media(max-width: 1024px){
+    .pagina-login{
+        padding: 40% 0 0 0;
+    }
+
+    .campos-login{
+        width: 70%
+    }
+
+    .email, .senha{
+        font-size: 14px;
+    }
+
+    .titulo-quizz{
+        width: 80%;
+        font-size: 18px;
+    }
+
+    .informacao-pergunta, .informacao-niveis{
+        width: 80%;
+    }
+
+    .resposta, .imagem, .minimo, .maximo{
+        width: 100%;
+    }
+
+    .conjunto-resposta-imagem, .acertos{
+        display: block;
+    }
+
+    .perguntas-quizz h1{
+        width: 80%;
+        font-size: 22px;
+    }
+    .perguntas-quizz h2{
+        width: 80%;
+        font-size: 18px;
+    }
+
+    .linha1, .linha2{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .campo-resposta{
+        width: 70%;
+        margin: 0 0 10px 0;
+    }
+
+    .container-nivel{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .div-texto{
+        width: 80%;
+    }
+
+    .titulo-nivel{
+        width: 100%;
+    }
+
+    .imagem-nivel{
+        width: 80%;
+    }
+
+}
