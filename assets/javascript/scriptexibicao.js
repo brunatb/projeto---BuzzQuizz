@@ -28,7 +28,7 @@ function buscarNaLista(idQuizz){
 }
 
 function renderizarNomeQuizz(nomeQuizz){
-    var h1 = containerExibicao.querySelector("h1");
+    var h1 = perguntasQuizz.querySelector("h1");
     h1.innerText = nomeQuizz;
 }
 
@@ -63,10 +63,11 @@ function escolheuResposta(elemento){
     var mudarCorFundo = document.querySelectorAll(".campo-resposta");
     for(var i = 0; i < mudarCorFundo.length; i++){
         if(mudarCorFundo[i].classList.contains("acerto")){
-            mudarCorFundo[i].style.background ="#DAFFD9";
+            mudarCorFundo[i].style.background ="#efffdb";
         }else if(mudarCorFundo[i].classList.contains("erro")){
-            mudarCorFundo[i].style.background ="#FFD9D9";
+            mudarCorFundo[i].style.background ="#ffdedb";
         }
+        mudarCorFundo[i].removeAttribute("onclick");
     }
     setTimeout(organizarPerguntas, 2000);
 }
@@ -84,12 +85,21 @@ function tratarAcertos(){
     renderizarResultado(porcentagem);
 }
 
+function voltarExibicaoParaListagem(){
+    var paginaListagem = document.querySelector(".listagem-quizzes");
+    var paginaExibicao = document.querySelector(".exibicao-quizz");
+    paginaExibicao.style.display = "none";
+    paginaListagem.style.display = "block";
+    perguntasQuizz.innerHTML = '<h1></h1><h2></h2><div class="linha1"></div><div class="linha2"></div>';
+    containerExibicao.innerHTML = ' <header><p onclick="voltarExibicaoParaListagem()">BuzzQuizz</p></header><div class="perguntas-quizz"></div>'
+    containerExibicao.appendChild(perguntasQuizz);
+}
 
 function renderizarPerguntaERespostas(perguntaAtual){
     var conjuntoRespostas = perguntaAtual.respostas;
-    var tituloPerguntaAtual = containerExibicao.querySelector("h2");
-    var linhaDeCima = containerExibicao.querySelector(".linha1");
-    var linhaDeBaixo = containerExibicao.querySelector(".linha2");
+    var tituloPerguntaAtual = perguntasQuizz.querySelector("h2");
+    var linhaDeCima = perguntasQuizz.querySelector(".linha1");
+    var linhaDeBaixo = perguntasQuizz.querySelector(".linha2");
     tituloPerguntaAtual.innerText = perguntaAtual.tituloPergunta;
     conjuntoRespostas.sort(randOrd);
     for(var i = 0; i < 4; i++){
@@ -122,8 +132,8 @@ function renderizarConjuntoResposta(pai, conjuntoResposta, perguntaAtual){
 }
 
 function renderizarResultado(porcentagem){
-    containerExibicao.querySelector("h1").innerText = objetoQuizz.title;
-    containerExibicao.querySelector("h2").innerText = "Você acertou " + quantidadeAcertos + " de " + numeroPerguntas + " perguntas! Score: " +  porcentagem + "%";
+    perguntasQuizz.querySelector("h1").innerText = objetoQuizz.title;
+    perguntasQuizz.querySelector("h2").innerText = "Você acertou " + quantidadeAcertos + " de " + numeroPerguntas + " perguntas! Score: " +  porcentagem + "%";
     
     var containerNivel = document.createElement("div");
     containerNivel.classList.add("container-nivel");

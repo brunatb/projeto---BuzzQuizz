@@ -12,12 +12,18 @@ function buscarQuizzes(){
 
 function extrairQuizzes(resposta){
     listaQuizzes = resposta.data;
-    console.log(resposta.data);
     renderizarQuizzes();
 }
 
 function erroCarregarQuizzes(resposta){
     window.location.reload();
+}
+
+function telaCriacaoDeQuizzes(){
+    var paginaListagem = document.querySelector(".listagem-quizzes");
+    var paginaCriacao = document.querySelector(".criacao-quizzes");
+    paginaListagem.style.display = "none";
+    paginaCriacao.style.display = "block";
 }
 
 function renderizarQuizzes(){
@@ -36,10 +42,3 @@ function renderizarQuizzes(){
         containerQuizzes.appendChild(quizzExistente);
     }
 } 
-
-function telaCriacaoDeQuizzes(){
-    var paginaListagem = document.querySelector(".listagem-quizzes");
-    var paginaCriacao = document.querySelector(".criacao-quizzes");
-    paginaListagem.style.display = "none";
-    paginaCriacao.style.display = "block";
-}

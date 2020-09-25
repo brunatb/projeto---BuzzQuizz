@@ -7,12 +7,16 @@
 }
 
 .listagem-quizzes header{
-    padding: 10px;
-    background: blue;
+    padding: 15px;
+    background: #2b2d42;
     color: white;
     font-size: 30px;
     font-weight: bold;
     margin: 0 0 35px 0;
+}
+
+.listagem-quizzes header p{
+    cursor: pointer;
 }
 
 .container-quizzes{
@@ -31,8 +35,8 @@
     align-items: center;
     text-align: center;
     flex-shrink: 0;
-    width: 120px;
-    height: 140px;
+    width: 140px;
+    height: 160px;
     border-radius: 15px;
     padding: 15px;
     font-size: 16px;
@@ -41,10 +45,11 @@
     margin: 0 10px 10px 10px;
     box-shadow: 0.5px 0.5px 4px 1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    background: #edf2f4;
 }
 
 .novo{
-    background: blue;
+    background: #ef233c;
     color: white;
     font-weight: bold;
     cursor: initial;

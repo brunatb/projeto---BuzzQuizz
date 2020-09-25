@@ -8,14 +8,14 @@
     font-family: 'Roboto', sans-serif;
     width: 100%;
     height: 100vh;
-    background: white;
+    background: #edf2f4;
     padding: 10% 0 0 0;
 }
 
 .campos-login{
     width: 30%;
     justify-content: center;
-    background: blue;
+    background: #2b2d42;
     padding: 15px;
     border-radius: 10px;
 }
@@ -24,12 +24,14 @@
     font-size: 32px;
     font-weight: bold;
     margin: 0 0 5px 0;
+    color: #ef233c;
 }
 
 .pagina-login h2{
     font-size: 20px;
     font-weight: 100;
     margin: 0 0 30px 0;
+    color: #2b2d42;
 }
 
 .email, .senha{
@@ -43,7 +45,7 @@
 .entrar{
     margin: 5px 0 0 0;
     padding: 10px 30px;
-    background: coral;
+    background: #ef233c;
     color: white;
     font-size: 16px;
     cursor: pointer;

@@ -7,12 +7,16 @@
 }
 
 .criacao-quizzes header{
-    padding: 10px;
-    background: blue;
+    padding: 15px;
+    background: #2b2d42;
     color: white;
     font-size: 30px;
     font-weight: bold;
-    margin: 0 0 25px 0;
+    margin: 0 0 15px 0;
+}
+
+.criacao-quizzes header p{
+    cursor: pointer;
 }
 
 .container-perguntas, .container-niveis{
@@ -33,7 +37,7 @@
 
 .informacao-pergunta, .informacao-niveis{
     width: 50%;
-    background: lightblue;
+    background: #8d99ae;
     padding: 10px;
     border-radius: 5px;
     margin: 0 0 10px 0;
@@ -60,19 +64,19 @@
 .resposta, .imagem{
     width: 49.5%;
     font-size: 14px;
-    background: #FFD9D9;
+    background: #ffdedb;
     padding: 5px;
     border-radius: 5px;
     margin: 0 0 5px 0;
 }
 
 .correta{
-    background: #DAFFD9;
+    background: #efffdb;;
 }
 
 .criacao-quizzes ion-icon{
     font-size: 30px;
-    color: #6C8FB8;
+    color: #8d99ae;
     margin: 5px calc(50% - 15px) 5px calc(50% - 15px);
     cursor: pointer;
 }
@@ -106,7 +110,7 @@
 .publicar p{
     width: 50%;
     padding: 10px;
-    background: blue;
+    background: #ef233c;
     color: white;
     font-size: 18px;
     text-align: center;
