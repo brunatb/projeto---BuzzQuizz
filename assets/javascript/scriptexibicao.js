@@ -86,6 +86,9 @@ function tratarAcertos(){
 }
 
 function voltarExibicaoParaListagem(){
+    numeroPerguntas = 0;
+    contadorPerguntasExibidas = 0;
+    quantidadeAcertos = 0;
     var paginaListagem = document.querySelector(".listagem-quizzes");
     var paginaExibicao = document.querySelector(".exibicao-quizz");
     paginaExibicao.style.display = "none";
