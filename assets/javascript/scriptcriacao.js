@@ -34,8 +34,11 @@ function pegarQuizzes(){
 
     pegarRespostas(todasPerguntas);
     if(necessarioCorrecao === 0){
+        contadorPerguntas = 1;
+        contadorNivel = 1;
         pegarNiveis(todosNiveis);
         mandarQuizz();
+        resetarPerguntasENiveis();
     }
 }
 
@@ -125,12 +128,29 @@ function telaVoltarListagem(){
     var paginaCriacao = document.querySelector(".criacao-quizzes");
     paginaListagem.style.display = "block";
     paginaCriacao.style.display = "none";
+    contadorPerguntas = 1;
+    contadorNivel = 1;
+    resetarPerguntasENiveis();
     buscarQuizzes();
 }
 
 function seErro(){
     alert("Erro");
     document.location.reload();
+}
+
+function resetarPerguntasENiveis(){
+    var containerPerguntas = document.querySelector(".container-perguntas");
+    containerPerguntas.innerHTML = '<input type="text" placeholder="Digite o título do seu quizz" class="titulo-quizz">';
+    var novaPergunta = document.createElement("div");
+    novaPergunta.classList.add("informacao-pergunta");
+    renderizarPerguntas(containerPerguntas, novaPergunta);
+
+    var containerNiveis = document.querySelector(".container-niveis");
+    containerNiveis.innerHTML = "";
+    var novoNivel =  document.createElement("div");
+    novoNivel.classList.add("informacao-niveis");
+    renderizarNivel(containerNiveis, novoNivel);
 }
 
 

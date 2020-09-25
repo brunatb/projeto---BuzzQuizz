@@ -7,13 +7,16 @@
 }
 
 .exibicao-quizz header{
-    font-family: 'Roboto', sans-serif;
-    padding: 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 15px;
     background: #2b2d42;
     color: white;
     font-size: 30px;
     font-weight: bold;
-    margin: 0 0 25px 0;
+    z-index: 1;
 }
 
 .exibicao-quizz header p{
@@ -31,7 +34,7 @@
     font-size: 30px;
     font-weight: bold;
     color: black;
-    margin: 0 0 20px 0;
+    margin: 100px 0 20px 0;
 }
 
 .perguntas-quizz h2{
@@ -75,6 +78,7 @@
 .container-nivel{
     display: flex;
     justify-content: center;
+    margin: 10px 0 0 0;
 }
 
 .div-texto{
@@ -97,4 +101,5 @@
     height: 40vh;
     background-size: cover;
     background-repeat: no-repeat;
+    margin: 15px 0;
 }
