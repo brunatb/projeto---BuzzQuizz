@@ -93,14 +93,14 @@ function pegarNiveis(todosNiveis){
         estruturaNiveis.max = todosNiveis[i].querySelector(".maximo").value;
         estruturaNiveis.max = estruturaNiveis.max.trim();
 
-        estruturaNiveis.tituloNivel = todosNiveis[i].querySelector(".titulo-nivel").value;
+        estruturaNiveis.tituloNivel = todosNiveis[i].querySelector(".titulo-nivel-criacao").value;
         estruturaNiveis.tituloNivel = estruturaNiveis.tituloNivel.trim();
         estruturaNiveis.tituloNivel = primeiraLetraMaiuscula(estruturaNiveis.tituloNivel);
 
-        estruturaNiveis.linkImagem = todosNiveis[i].querySelector(".imagem-nivel").value;
+        estruturaNiveis.linkImagem = todosNiveis[i].querySelector(".imagem-nivel-criacao").value;
         estruturaNiveis.linkImagem = estruturaNiveis.linkImagem.trim();
 
-        estruturaNiveis.descricao = todosNiveis[i].querySelector(".descricao-nivel").value;
+        estruturaNiveis.descricao = todosNiveis[i].querySelector(".descricao-nivel-criacao").value;
         estruturaNiveis.descricao = estruturaNiveis.descricao.trim();
         estruturaNiveis.descricao = primeiraLetraMaiuscula(estruturaNiveis.descricao);
 
@@ -130,6 +130,7 @@ function telaVoltarListagem(){
 
 function seErro(){
     alert("Erro");
+    document.location.reload();
 }
 
 
@@ -146,8 +147,8 @@ function renderizarPerguntas(containerPerguntas, novaPergunta){
 function renderizarNivel(containerNiveis, novoNivel){
     novoNivel.innerHTML = '<p>Nivel ' + contadorNivel + '</p>';
     novoNivel.innerHTML += '<div class="acertos"><input type="text" placeholder="% Mínima de acerto do nível" class="minimo"><input type="text" placeholder="% Máxima de acerto do nível" class="maximo"></div>';
-    novoNivel.innerHTML += '<input type="text" placeholder="Título do nível" class="titulo-nivel">';
-    novoNivel.innerHTML += '<input type="text" placeholder="Link da imagem do nível" class="imagem-nivel">';
-    novoNivel.innerHTML += '<textarea placeholder="Descrição do nível" class="descricao-nivel"></textarea>';
+    novoNivel.innerHTML += '<input type="text" placeholder="Título do nível" class="titulo-nivel-criacao">';
+    novoNivel.innerHTML += '<input type="text" placeholder="Link da imagem do nível" class="imagem-nivel-criacao">';
+    novoNivel.innerHTML += '<textarea placeholder="Descrição do nível" class="descricao-nivel-criacao"></textarea>';
     containerNiveis.appendChild(novoNivel);
 }

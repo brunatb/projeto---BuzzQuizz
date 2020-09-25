@@ -13,9 +13,11 @@
 }
 
 .campos-login{
+    width: 30%;
     justify-content: center;
     background: blue;
     padding: 15px;
+    border-radius: 10px;
 }
 
 .pagina-login h1{
@@ -30,10 +32,12 @@
     margin: 0 0 30px 0;
 }
 
-input{
+.email, .senha{
+    width: 100%;
     margin: 0 0 8px 0;
     font-size: 16px;
     padding: 8px;
+    border-radius: 10px;
 }
 
 .entrar{
@@ -43,4 +47,5 @@ input{
     color: white;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
 }

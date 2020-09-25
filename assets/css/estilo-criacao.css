@@ -16,11 +16,14 @@
 }
 
 .container-perguntas, .container-niveis{
-   padding: 0 25%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 
 .titulo-quizz{
-    width: 100%;
+    width: 50%;
     padding: 5px;
     font-size: 20px;
     border: 1px solid #C1C1C1;
@@ -29,7 +32,7 @@
 }
 
 .informacao-pergunta, .informacao-niveis{
-    width: 100%;
+    width: 50%;
     background: lightblue;
     padding: 10px;
     border-radius: 5px;
@@ -74,7 +77,7 @@
     cursor: pointer;
 }
 
-.minimo, .maximo, .titulo-nivel, .imagem-nivel, .descricao-nivel{
+.minimo, .maximo, .titulo-nivel-criacao, .imagem-nivel-criacao, .descricao-nivel-criacao{
     font-size: 14px;
     background: #FFFFFF;
     padding: 5px;
@@ -86,20 +89,22 @@
     width: 49.5%;
 }
 
-.titulo-nivel, .imagem-nivel, .descricao-nivel{
+.titulo-nivel-criacao, .imagem-nivel-criacao, .descricao-nivel-criacao{
     width: 100%;
 }
 
-.descricao-nivel{
+.descricao-nivel-criacao{
     font-family: 'Roboto', sans-serif;
 }
 
 .publicar{
-    padding: 0 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .publicar p{
-    width: 100%;
+    width: 50%;
     padding: 10px;
     background: blue;
     color: white;
